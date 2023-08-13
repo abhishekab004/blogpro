@@ -1,0 +1,45 @@
+.content{
+    width: 65% ;
+    float: left;
+    background-color:red;
+    color:black;
+    padding: 25px 0 0 30px ;
+    height: 100%;
+
+}
+.sidebar{
+    width: 35% ;
+    float: right;
+    background-color: black;
+    color: yellow;
+    padding: 25px;
+    height: 100%;
+
+}
+h1{
+    text-align: center;
+    border-bottom: 3px solid purple;
+    padding: 20px;
+    color: white;
+}
+#date{
+    color: rgb(245, 244, 248);
+    font-size: 15px;
+    font-style: italic;
+}
+a{
+    color: chartreuse;
+}
+body{
+    background-color: red;
+}
+#ch{
+    color: white;
+    font-size: 20px;
+    border: 2px solid yellowgreen;
+}
+#pcount{
+    font-size: 35px;
+    font-weight: 900;
+    color: aqua;
+}

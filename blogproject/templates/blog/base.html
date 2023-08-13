@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% load blog_tags %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/blog3.css' %}">
+    <title> {% block title_block %} {% endblock  %} </title>
+</head>
+<body>
+    <div class="content">
+        {% block body_block %}
+        {% endblock  %} 
+    </div>
+
+    <div class="sidebar">
+        <h2>Abhi's Blogs</h2>
+        <p>The Total Number Of Post Upto Today : <span id='pcount'>{% total_posts %}</span> </p>
+        <h1>Latest Post : </h1> {% show_latest_post %}
+        <h1>Most Commented Post :</h1>
+        {% get_most_commented_post as most_commented_post %}
+        <ul>
+            {% for post in most_commented_post %}
+               <li> <a href="{{post.get_absolute_url}}"> {{post.title}} </a> </li> 
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
